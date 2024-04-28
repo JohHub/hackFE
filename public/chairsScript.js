@@ -6,7 +6,7 @@ const chairData = {
 
 // Function to fetch data from the REST API and update chairData
 function fetchChairData() {
-    fetch('http://localhost:5000/')
+    fetch('http://192.168.137.171:5000/')
         .then(response => response.json())
         .then(data => {
             // Update chairData with the received data
