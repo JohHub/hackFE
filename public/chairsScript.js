@@ -58,7 +58,8 @@ function generateChairs() {
 
 // Using a for loop to iterate over the array of values
     var i = 0;
-    for (; i < 2; i++) {
+
+    for (; i < 4; i++) {
         const value = values[i];
         const chair = document.createElement('img');
         chair.className = 'chair';
@@ -67,32 +68,17 @@ function generateChairs() {
         chairCounter++;
 
         // Append the chair to the container
-        chairsContainer1.appendChild(chair);
-    }
-    if (i == 2) {
-        const value = values[i];
-        const chair = document.createElement('img');
-        chair.className = 'chair';
-        chair.src = value === false ? 'resources/armchair-red.png' : 'resources/armchair-green.png';
-        chair.id = String(chairCounter);
-        chairCounter++;
+        if (i == 0) {
+            chairsContainer3.appendChild(chair);
+        }else if (i == 1) {
+            chairsContainer2.appendChild(chair);
+        } else {
+            chairsContainer1.appendChild(chair);
+        }
 
-        // Append the chair to the container
-        chairsContainer2.appendChild(chair);
-        i++;
     }
-    if (i==3) {
-        const value = values[i];
-        const chair = document.createElement('img');
-        chair.className = 'chair';
-        chair.src = value === false ? 'resources/armchair-red.png' : 'resources/armchair-green.png';
-        chair.id = String(chairCounter);
-        chairCounter++;
 
-        // Append the chair to the container
-        chairsContainer3.appendChild(chair);
-        i++;
-    }
+
 
 }
 
