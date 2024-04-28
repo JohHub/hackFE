@@ -57,9 +57,9 @@ function generateChairs() {
     const values = Object.values(chairData);
 
 // Using a for loop to iterate over the array of values
-    var i = 0;
+    var i = 3;
 
-    for (; i < 4; i++) {
+    for (; i >= 0; i--) {
         const value = values[i];
         const chair = document.createElement('img');
         chair.className = 'chair';
