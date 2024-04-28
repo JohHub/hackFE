@@ -63,7 +63,17 @@ function generateChairs() {
         const value = values[i];
         const chair = document.createElement('img');
         chair.className = 'chair';
-        chair.src = value === false ? 'resources/armchair-red.png' : 'resources/armchair-green.png';
+        if (i==0) {
+            chair.src = value === false ? 'resources/armchair-red-rotated-left.png' : 'resources/armchair-green-rotated-left.png';
+
+        } else if (i==1) {
+            chair.src = value === false ? 'resources/armchair-red-rotated-right.png' : 'resources/armchair-green-rotated-right.png';
+
+        } else {
+            chair.src = value === false ? 'resources/armchair-red.png' : 'resources/armchair-green.png';
+
+        }
+
         chair.id = String(chairCounter);
         chairCounter++;
 
